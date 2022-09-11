@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    max-width: 600px;
+    margin: auto;
+    /* background-color: rgb(169, 237, 237); */
+}

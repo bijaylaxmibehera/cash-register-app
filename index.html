@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1 class="heading">Cash Register Manager</h1>
+        <p class="description">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
+        <label for="bill-amonut">Bill Amount:</label>
+        <input type="text" id="bill-amonut"/>
+        <label for="cash-given">Cash Given:</label>
+        <input type="text" id="cash-given"/>
+        <button class="check-btn">Check</button>
+        <table class="change-table">
+            <caption>Return Change:</caption>
+            <tr>
+                <th>No. of Notes</th>
+            </tr>
+            <tr>
+                <th>Notes</th>
+                <td>2000</td>
+                <td>500</td>
+                <td>100</td>
+                <td>20</td>
+                <td>10</td>
+                <td>5</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </div>
 </body>
 <script src="./JS/app.js" type="javascript"></script>
 </html>
