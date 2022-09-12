@@ -5,21 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cash register</title>
-    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1 class="heading">Cash Register Manager</h1>
         <p class="description">Enter the bill amount and cash given by the customer and know minimum number of notes to return.</p>
         <label for="bill-amonut">Bill Amount:</label>
-        <input type="text" id="bill-amonut"/>
+        <input type="text" id="bill-amount"/>
         <label for="cash-given">Cash Given:</label>
         <input type="text" id="cash-given"/>
-        <button class="check-btn">Check</button>
+        <button id="check-btn">Check</button>
+        <p id="error-message"></p>
         <table class="change-table">
             <caption>Return Change:</caption>
             <tr>
                 <th>No. of Notes</th>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
+                <td class="no-of-notes"></td>
             </tr>
             <tr>
                 <th>Notes</th>
@@ -33,6 +41,7 @@
             </tr>
         </table>
     </div>
+
 </body>
-<script src="./JS/app.js" type="javascript"></script>
+<script src="app.js"></script>
 </html>
