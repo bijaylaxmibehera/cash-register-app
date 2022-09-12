@@ -8,7 +8,7 @@ const availableNotes=[2000,500,100,20,10,5,1];
 checkButton.addEventListener("click", function validateBillAndCashAmt() {
   hideMessage();
   if (billAmount.value > 0) {
-    if (billAmount.value >= cashGiven.value) {
+    if (cashGiven.value >= billAmount.value) {
        const amountToBeReturned=cashGiven.value-billAmount.value ;
        calculateChange(amountToBeReturned);
     } else {
@@ -23,7 +23,8 @@ checkButton.addEventListener("click", function validateBillAndCashAmt() {
 
 function showMessage(msg) {
   message.style.display = "block";
-  message.innerText = msg;
+  message.innerText = "** "+msg+" **";
+  message.style.color="red";
 }
 
 function hideMessage() {
