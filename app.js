@@ -9,7 +9,12 @@ function clickHandler() {
   const billAmt = Number(billAmount.value);
   const cashAmt = Number(cashGiven.value);
   // console.log(billAmt, cashAmt);
-  validateBillAndCashAmount(billAmt, cashAmt);
+  if (billAmt && cashAmt) {
+    validateBillAndCashAmount(billAmt, cashAmt);
+  } else {
+    showMessage("Please fill all the input field");
+  }
+  
 }
 function validateBillAndCashAmount(billAmt, cashAmt) {
   hideMessage();
