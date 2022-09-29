@@ -1,8 +1,11 @@
 const billAmount = document.querySelector("#bill-amount");
+const nextBtn = document.querySelector(".next-btn");
+const nextPart = document.querySelector(".next-part");
 const cashGiven = document.querySelector("#cash-given");
 const checkButton = document.querySelector("#check-btn");
 const message = document.querySelector("#error-message");
 const noOfNotes = document.querySelectorAll(".no-of-notes");
+
 
 function clickHandler() {
   // hideMessage();
@@ -14,8 +17,9 @@ function clickHandler() {
   } else {
     showMessage("Please fill all the input field");
   }
-  
+
 }
+
 function validateBillAndCashAmount(billAmt, cashAmt) {
   hideMessage();
   if (billAmt > 0) {
@@ -42,9 +46,23 @@ function calculateChange(amountToBeReturned) {
 function hideMessage() {
   message.style.display = "none";
 }
+
 function showMessage(msg) {
   message.style.display = "block";
-  message.innerText ="** "+ msg+" **";
+  message.innerText = "** " + msg + " **";
 }
+
+function showMessage(msg) {
+  message.style.display = "block";
+  message.innerText = msg;
+}
+
+function nextButtonClickHandler() {
+
+  nextPart.classList.toggle("show-more");
+  nextBtn.style.display = "none";
+
+}
+nextBtn.addEventListener("click", nextButtonClickHandler);
 
 checkButton.addEventListener("click", clickHandler);
