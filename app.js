@@ -27,7 +27,7 @@ function validateBillAndCashAmount(billAmt, cashAmt) {
       const amountToBeReturned = cashAmt - billAmt;
       calculateChange(amountToBeReturned);
     } else {
-      showMessage("Invalied bill amount");
+      showMessage("The cash amount should be greater or equal to the bill amount");
     }
   } else {
     showMessage("The bill amount should be greater than 0.");
